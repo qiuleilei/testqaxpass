@@ -1,0 +1,13 @@
+import json
+import base64
+import sqlite3
+import win32crypt
+from Crypto.Cipher import AES
+import shutil
+from datetime import  datetime, timedelta
+ 
+def get_chrome_datetime(chromedate):
+    """从chrome格式的datetime返回一个`datetime.datetime`对象
+因为'chromedate'的格式是1601年1月以来的微秒数"""
+    return datetime(1601, 1, 1) + timedelta(microseconds=chromedate)
+ffrfrefert
